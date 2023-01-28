@@ -47,11 +47,11 @@ function CompanyDetail() {
   if (errors.length) return <Errors errors={errors} />;
 
   return (
-    <div>
+    <>
       <h1>{company.data.name}</h1>
-      <p>{company.data.description}</p>
+      <p className="mb-4">{company.data.description}</p>
       <JobList jobs={company.data.jobs} />
-    </div>
+    </>
   );
 }
 

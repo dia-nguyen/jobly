@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Errors from "../Utilities/Errors";
+import "./LoginForm.css"
 /**
  * Login Form
  *
@@ -41,30 +42,37 @@ function LoginForm({ login }) {
   }
 
   return (
-    <div className="w-50 m-auto">
+    <div className="LoginForm w-50 m-auto">
       {errors.length !== 0 && <Errors errors={errors} />}
-      <h5>Login</h5>
+
+      <h3 className="text-center mb-3">Login</h3>
       <div className="card">
         <form onSubmit={handleSubmit} className="card-body form-group">
-          <label htmlFor="username" className="form-label">Username</label>
+          <label htmlFor="username" className="form-label">
+            Username
+          </label>
           <input
-            className="form-control mb-2"
+            className="form-control mb-3"
             name="username"
             type="text"
             id="username"
             onChange={handleChange}
             value={formData.username}
           />
-          <label htmlFor="password" className="form-label">Password</label>
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
           <input
-            className="form-control mb-2"
+            className="form-control mb-3"
             name="password"
             type="password"
             id="password"
             onChange={handleChange}
             value={formData.password}
           />
-          <button className="btn btn-primary">Login</button>
+          <div className="d-block text-center mt-4">
+            <button className="btn btn-primary w-100">Login</button>
+          </div>
         </form>
       </div>
     </div>

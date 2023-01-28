@@ -3,6 +3,10 @@ a.Company {
   color: unset;
 }
 
+.Company .card {
+  min-height: 170px;
+
+}
 img {
   width: 50px;
 }

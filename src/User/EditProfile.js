@@ -2,6 +2,7 @@ import userContext from "./userContext";
 import { useContext, useState } from "react";
 import Errors from "../Utilities/Errors";
 import JoblyApi from "../api";
+import "./EditProfile.css"
 
 /**
  * Edit profile form
@@ -54,17 +55,19 @@ function EditProfile() {
   }
 
   return (
-    <div className="EditProfile w-50 m-auto">
+    <div className="EditProfile m-auto">
+
       {errors.length !== 0 && <Errors errors={errors} />}
       {success && <div className="alert alert-success">Updated profile!</div>}
-      <h5>Profile</h5>
+
+      <h3 className="text-center mb-3">Profile</h3>
       <div className="card">
         <form onSubmit={handleSubmit} className="card-body form-group">
           <label htmlFor="username" className="form-label">
             Username
           </label>
           <input
-            className="form-control mb-2"
+            className="form-control mb-3"
             name="username"
             type="text"
             id="username"
@@ -75,7 +78,7 @@ function EditProfile() {
             First Name
           </label>
           <input
-            className="form-control mb-2"
+            className="form-control mb-3"
             name="firstName"
             type="text"
             id="firstName"
@@ -86,7 +89,7 @@ function EditProfile() {
             Last Name
           </label>
           <input
-            className="form-control mb-2"
+            className="form-control mb-3"
             name="lastName"
             type="text"
             id="lastName"
@@ -97,14 +100,16 @@ function EditProfile() {
             Email
           </label>
           <input
-            className="form-control mb-2"
+            className="form-control mb-3"
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
             value={formData.email}
           />
-          <button className="btn btn-primary">Save Changes</button>
+          <div className="d-block text-center mt-4">
+            <button className="btn btn-primary">Save Changes</button>
+          </div>
         </form>
       </div>
     </div>

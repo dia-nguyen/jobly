@@ -15,7 +15,7 @@ function HomePage() {
       <h1>Jobly</h1>
       <h3>All the jobs in one, convenient place.</h3>
       {user ? (
-        <>{`Welcome back ${user.firstName}`}</>
+        <p className="mt-4">{`Welcome back ${user.firstName}!`}</p>
       ) : (
         <div className="HomePage-btn">
           <Link to="/login" className="btn btn-primary me-2">

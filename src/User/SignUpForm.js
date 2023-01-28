@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Errors from "../Utilities/Errors";
+import "./SignUpForm.css";
 
 /**
  * SignUp Form
@@ -46,12 +47,14 @@ function SignUpForm({ signUp }) {
   }
 
   return (
-    <div className="w-50 m-auto">
+    <div className="SignUpForm m-auto">
       {errors.length !== 0 && <Errors errors={errors} />}
-      <h5>Sign Up</h5>
+      <h3 className="text-center mb-3">Sign Up</h3>
       <div className="card">
         <form onSubmit={handleSubmit} className="card-body form-group">
-          <label htmlFor="username" className="form-label">Username</label>
+          <label htmlFor="username" className="form-label">
+            Username
+          </label>
           <input
             className="form-control mb-2"
             name="username"
@@ -60,7 +63,9 @@ function SignUpForm({ signUp }) {
             onChange={handleChange}
             value={formData.username}
           />
-          <label htmlFor="password" className="form-label">Password</label>
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
           <input
             className="form-control mb-2"
             name="password"
@@ -69,7 +74,9 @@ function SignUpForm({ signUp }) {
             onChange={handleChange}
             value={formData.password}
           />
-          <label htmlFor="firstName" className="form-label">First Name</label>
+          <label htmlFor="firstName" className="form-label">
+            First Name
+          </label>
           <input
             className="form-control mb-2"
             name="firstName"
@@ -78,7 +85,9 @@ function SignUpForm({ signUp }) {
             onChange={handleChange}
             value={formData.firstName}
           />
-          <label htmlFor="lastName" className="form-label">Last Name</label>
+          <label htmlFor="lastName" className="form-label">
+            Last Name
+          </label>
           <input
             className="form-control mb-2"
             name="lastName"
@@ -87,7 +96,9 @@ function SignUpForm({ signUp }) {
             onChange={handleChange}
             value={formData.lastName}
           />
-          <label htmlFor="email" className="form-label">Email</label>
+          <label htmlFor="email" className="form-label">
+            Email
+          </label>
           <input
             className="form-control mb-2"
             name="email"
@@ -96,7 +107,9 @@ function SignUpForm({ signUp }) {
             onChange={handleChange}
             value={formData.email}
           />
-          <button className="btn btn-primary">Sign Up</button>
+          <div className="d-block text-center mt-4">
+            <button className="btn btn-primary w-100">Sign Up</button>
+          </div>
         </form>
       </div>
     </div>

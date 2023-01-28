@@ -1,3 +1,21 @@
+body {
+  background-color: #fafbfe;
+}
+
+html, body, #root, .App, .App>div {
+  height: 100%;
+}
+
 .App {
-  height: 100vh;
+  height: 100%;
+}
+
+.card {
+  box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+  border-color: transparent;
+}
+
+.card .card-body p {
+  margin-bottom: 0;
+  letter-spacing: 0;
 }

@@ -7,7 +7,7 @@ import PaginatedItems from "../Utilities/Paginate";
 */
 function JobList({ jobs }) {
   return (
-    <div>
+    <div className="row">
       <PaginatedItems itemsPerPage={10} items={jobs} paginateFor="jobs" />
     </div>
   );

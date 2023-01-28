@@ -6,7 +6,7 @@ import PaginatedItems from "../Utilities/Paginate";
  * - companies - list of obj like [{ name, description, handle, ... }, ...]
  */
 function CompanyList({ companies }) {
-  return (<div>
+  return (<div className="row">
     <PaginatedItems itemsPerPage={10} items={companies} paginateFor="companies" />
   </div>
   );

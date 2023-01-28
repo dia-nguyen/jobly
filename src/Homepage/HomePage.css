@@ -4,4 +4,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.HomePage-btn {
+  margin-top: 2em
 }
