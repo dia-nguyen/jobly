@@ -2,6 +2,8 @@ import userContext from "../User/userContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
+import joblyLogo from "../jobly-logo.svg";
+
 /**
  * Renders HomePage
  * App -> RouteList -> HomePage
@@ -9,10 +11,10 @@ import "./HomePage.css";
 function HomePage() {
   const { user } = useContext(userContext);
 
-  // debugger;
   return (
     <div className="HomePage">
-      <h1>Jobly</h1>
+
+      <h1>Jobly <img src={joblyLogo} alt="jobly logo" /> </h1>
       <h3>All the jobs in one, convenient place.</h3>
       {user ? (
         <p className="mt-4">{`Welcome back ${user.firstName}!`}</p>

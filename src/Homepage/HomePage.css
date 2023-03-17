@@ -10,3 +10,16 @@
 .HomePage-btn {
   margin-top: 2em
 }
+
+.HomePage h1{
+  color: #FBCA4D;
+  font-size: 5em;
+}
+
+.HomePage h1 img{
+  width: 75px;
+}
+
+.HomePage h3, .HomePage p {
+  color: #FFF;
+}

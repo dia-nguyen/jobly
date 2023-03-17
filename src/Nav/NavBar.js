@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import userContext from "../User/userContext";
 import { useContext } from "react";
+import whiteLogo from "../jobly-logo-white.svg";
+import "./Nav.css"
+
 /**
  * Renders Navigation Bar
  * Props:
@@ -62,7 +65,7 @@ function NavBar({ logout }) {
     <nav className="Navbar navbar justify-content-between navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <NavLink className="navbar-brand ms-2" to="/">
-          Jobly
+          Jobly <img src={whiteLogo} alt="jobly logo"/>
         </NavLink>
         <button
           className="navbar-toggler"
